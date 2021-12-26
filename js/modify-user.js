@@ -1,5 +1,5 @@
 'use strict';
-const url = 'http://10.114.34.40/~jesseraj/Projekti/wop-projekti/'; // change url when uploading to server
+const url = 'http://10.114.34.40/~jesseraj/Projekti2/wop-projekti/'; // change url when uploading to server
 
 // select existing html elements
 const modUserForm = document.querySelector('#modUserForm');
