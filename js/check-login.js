@@ -1,6 +1,6 @@
 (async () => {
   'use strict';
-  const url = 'http://localhost:5000'; // change url when uploading to server
+  const url = 'http://10.114.34.40/~jesseraj/Projekti/wop-projekti/'; // change url when uploading to server
 
   // check sessionStorage
   if (!sessionStorage.getItem('token') || !sessionStorage.getItem('user')) {
