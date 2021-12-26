@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>Tietämättömät<table></table></title>
+    <link href="./css/ui4.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="header">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="navNappi"><a href="front.html">Etusivu</a></li>
+                    <li class="navNappi"><a href="add-meme.html">Lisää meemu</a></li>
+                    <li class="navNappi"><a href="modify-user.html">Modify user</a></li>
+                    <li class="navNappi"><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>   
+
+        <div class="forms">
+            <div class="form-wrapper">
+                <h3 class="Otsikko">Add meme</h3>
+                <form action="http://localhost:5000/meme" method="post" class="addMeme"
+                    enctype="multipart/form-data" id="addMemeForm">
+                    <input class="infoField" type="text" name="name" placeholder="Name">
+                    <input class="infoField" type="text" name="description" placeholder="Description">
+                    <input class="infoField" type="text" name="birthdate" placeholder="Birthdate: YYYY-MM-DD">
+                    <input class="infoField" type="file" name="meme" accept="image/*" placeholder="Choose file">
+                    
+                    <button class="modbutton" type="submit">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/check-login.js"></script>
+    <script src="./js/serialize.js"></script>
+    <script src="./js/add-meme.js"></script>
+</body>
+
+</html>

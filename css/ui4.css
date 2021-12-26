@@ -1,0 +1,447 @@
+
+.forms {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.form-wrapper {
+  width: 33%;
+}
+
+.addMeme {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoField {
+    color: aqua;
+    margin: 0.5em;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.Otsikko {
+    color: aqua;
+    font-size: 4vw;
+    margin: 0.5em;
+    text-align: center;
+}
+
+/* Main jutut */
+/* ------------------------------------------------------------------------------ */
+html,
+body {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    -ms-overflow-style: none;  /* IE:n ja Edge:n scrollbarit */
+    scrollbar-width: none;  /* Firefox:n scrollbarit */
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* Just some snapping for mobile */
+}
+
+html::-webkit-scrollbar {
+    display: none; /*  Chrome:n, Safari:n and Opera:n scrollbarit */
+}
+
+main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+  
+body {
+    background-color: #28262C;
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Core/pohja sivuille */
+/* ------------------------------------------------------------------------------ */
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 50px; /* Tämä korjasi ylösliukumis-ongelman */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.rivi {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.one {
+    display: none;
+}
+
+.three {
+    display: none;
+}
+
+/* Navigaatio */
+/* ------------------------------------------------------------------------------ */
+
+.header {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.103);
+    width: 100%; /* Full width */
+}
+
+nav {
+    background-color: aqua;
+    width: auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-menu {
+    width: 80vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: auto;
+}
+
+.navNappi {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.mobile-nav-item {
+    display: none;
+}
+
+/* Modali*/
+/* ------------------------------------------------------------------------------ */
+.mainmenu {
+    display:flex;
+    font: bold 11px Arial;
+    background: url(https://c.tenor.com/FpbWqUpKsacAAAAM/kekw-twitch.gif);
+    color: #333333;
+    padding: 25px 50px 25px 50px;
+    max-width: fit-content;
+    max-height: fit-content;
+    border-radius: 15px;
+    height: auto;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: #a0a4b8;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    border-radius: 25px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color:#a0a4b8;
+    margin: 15% auto;
+    padding: 20px;
+    border: 3px solid #817900;
+    width: 40%;
+    height: 25%;
+}
+
+/* The Close Button */
+.close {
+    color: #817900;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+
+/* Postaus (meemi, tykkäynappi, kommentointi tms.) */
+/* ------------------------------------------------------------------------------ */
+.mainOtsikko {
+  color: aqua;
+  font-size: 5vw;
+}
+
+.meemilista {
+  width: 60%;
+  display: flex;
+  flex-direction: column-reverse;  
+  padding: 0;
+  margin: 0;
+}
+
+.postaus {
+    width: 100%;
+    border-color: #28262C;
+    border-bottom: rgb(44, 136, 148);
+    border-style: solid;
+    color:lavender;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+
+.meemiOtsikko {
+  margin: 1em;
+}
+
+.meemi {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    border-style: solid;
+}
+
+.meemiTiedot {
+  margin: 0.2em;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.modbutton {
+  background-color: rgb(0, 255, 42);
+  border-radius: 25px;
+  margin: 1em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.delbutton {
+  background-color: red;
+  border-radius: 25px;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+/* Kommentit isolla näytöllä meemin vieressä */
+/* ------------------------------------------------------------------------------ */
+
+.kommenttikentta {
+    float: right;
+    min-height: 400px;
+    width: 20%;
+    max-height: 70vh;
+    padding: 0;
+    overflow: hidden;
+    border-color: #817900;
+    border-style: solid;
+}
+
+.kommentti {
+    list-style-type:none;
+    border-color: #817900;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgb(116, 116, 116);
+    margin: 1vh;
+    padding: 1vh;
+    word-wrap: break-word;
+
+}
+
+
+
+/* Viestisivu */
+/* ------------------------------------------------------------------------------ */
+
+.viestikenttä {
+    padding: 0;
+    margin: 2vh;
+
+}
+
+.viesti {
+    width: 75%;
+    list-style-type: none;
+    border-color: #817900;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgb(163, 163, 163);
+    margin: auto;
+    margin-top: 2vh;
+    padding: 1vh;
+    word-wrap: break-word;
+   
+}
+
+/* Profiilin bio */
+/* ------------------------------------------------------------------------------ */
+
+.profilebio {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+#profiilikuva {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 4vh;
+    justify-content: flex-start;
+    
+}
+
+.bio {
+    max-width: 60%;
+    flex-direction: column;
+    margin: 0;
+    color: aqua;
+}
+
+#bionimi {
+    margin: 0;
+    color: aliceblue;
+}
+
+#bioteksti {
+    max-width: 60%;
+}
+
+#meemicount {
+    color: brown;
+
+}
+
+#tykkäyscount {
+    color: cornflowerblue;
+}
+
+/* Profiilin kuvat gridissä */
+/* ------------------------------------------------------------------------------ */
+
+.kuvat {
+    width: 100px;
+    height: 100px;
+}
+
+.row { /* profiilin kuvat tms */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.column { /* profiilin kuvat tms */
+    width: 60%;
+    justify-content: center;
+    padding: 1vh;
+}
+
+.column img { /* profiilin kuvat tms */
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.profiilinkuvat {
+    max-width: 30%;
+    margin: 1vh;
+}
+
+
+/* Mobiilinäkymän CSS */
+/* ------------------------------------------------------------------------------ */
+
+@media only screen and (max-width: 600px) {
+
+    /* Main jutut */
+    /* -------------------------------------------------------------- */
+    html,
+    body {
+        width: 300vw;
+        height: 100vh;
+        
+        margin: 0;
+        -ms-overflow-style: none;  /* IE:n ja Edge:n scrollbarit */
+        scrollbar-width: none;  /* Firefox:n scrollbarit */
+    }
+    
+    /* Core/pohja sivuille */
+    /* -------------------------------------------------------------- */
+    .rivi {
+        display: flex;
+        flex-direction: row;
+        width: 300vw;   
+    }
+
+    .one {
+        display: block;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        margin:0;
+    }
+
+    .three {
+        display: block;
+    }
+
+    /* Navigaatio */
+    /* -------------------------------------------------------------- */
+    .nav-item{
+        display: none;
+    }
+    
+    .mobile-nav-item {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    /* Postaus */
+    /* -------------------------------------------------------------- */
+    .meemi {
+        width: 100%;
+    }
+
+
+    .Napit {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        
+    }
+
+    /* -------------------------------------------------------------- */
+
+
+
+}
+
