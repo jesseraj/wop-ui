@@ -8,38 +8,55 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="forms">
-            <div class="form-wrapper" id="login-wrapper">
-                <h3>Login</h3>
-                <form id="login-form" class="light-border" action="http://10.114.34.40/~jesseraj/Projekti2/wop-projekti/auth/login" method="post">
-                    <div>
-                        <label>Email:</label>
-                        <input class="light-border" type="text" name="username" />
-                    </div>
-                    <div>
-                        <label>Password:</label>
-                        <input class="light-border" type="password" name="password" />
-                    </div>
-                    <div>
-                        <button class="light-border" type="submit">Log In</button>
-                    </div>
-                </form>
-            </div>
-            <button class="light-border" style="display: none;" id="log-out">Log out</button>
+    
 
-            <div class="form-wrapper">
-                <h3>Register</h3>
-                <form action="http://10.114.34.40/~jesseraj/Projekti2/wop-projekti/auth/register" method="post" class="light-border"
-                    id="add-user-form">
-                    <input class="light-border" type="text" name="name" placeholder="Name">
-                    <input class="light-border" type="text" name="email" placeholder="email">
-                    <input class="light-border" type="password" name="passwd" placeholder="Password">
-                    <button class="light-border" type="submit">Save</button>
-                </form>
+    <div class="container-fluid">
+        <header class="header">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="navNappi"><a href="front.html">Etusivu</a></li>
+                    <li class="navNappi"><a href="add-meme.html">Lisää meemu</a></li>
+                    <li class="navNappi"><a href="modify-user.html">Modify user</a></li>
+                    <li class="navNappi"><a href="logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>   
+    
+        <div class="container">
+            <div class="formslogin">
+                <div class="form-wrapperlogin" id="login-wrapper">
+                    <h2 class="loginOtsikot">Login</h2>
+                    <form id="login-form" class="light-border" action="http://localhost:3000/auth/login" method="post">
+                        <div>
+                            <input class="light-border" type="text" name="username" placeholder="Name"/>
+                        </div>
+                        <div>
+                            <input class="light-border" type="password" name="password" placeholder="Password"/>
+                        </div>
+                        
+                        <div>
+                            <button class="submitbtn" type="submit">Log In</button>
+                        </div>
+                    </form>
+                </div>
+                <button class="light-border" style="display: none;" id="log-out">Log out</button>
+
+                <div class="form-wrapperlogin">
+                    <h3 class="loginOtsikot">Register</h3>
+                    <form action="http://localhost:3000/auth/register" method="post" class="light-border"
+                        id="add-user-form">
+                        <input class="light-border" type="text" name="name" placeholder="Name">
+                        <input class="light-border" type="text" name="email" placeholder="email">
+                        <input class="light-border" type="password" name="passwd" placeholder="Password">
+                        <button class="savebtn" type="submit">Save</button>
+                    </form>
+                </div>  
             </div>
+            
         </div>
     </div>
+    <span class="psw"><a href="unlucky.html">Forgot password?</a></span>
+
     <script src="./js/serialize.js"></script>
     <script src="./js/login.js"></script>
 </body>

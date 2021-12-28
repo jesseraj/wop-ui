@@ -2,7 +2,6 @@
 .forms {
   display: flex;
   justify-content: center;
-  
 }
 
 .form-wrapper {
@@ -15,7 +14,7 @@
 }
 
 .infoField {
-    color: aqua;
+    color: rgb(122, 122, 122);
     margin: 0.5em;
     border-radius: 15px;
     padding: 1em;
@@ -27,6 +26,136 @@
     margin: 0.5em;
     text-align: center;
 }
+
+
+/* Loginsivu jutut */
+/* ------------------------------------------------------------------------------ */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    background-color: #28262C;
+    
+  }
+  
+  .container {
+    max-width: 40em;
+    margin: auto;
+    padding: 1em;
+    max-height: 20%;
+  }
+  
+  .light-border {
+    border-radius: 8px;
+    border-top: 2px solid #817900;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 100%;
+    
+  }
+  
+  ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    position: relative;
+  }
+  
+  h2{
+    color:rgb(36, 170, 141);
+  }
+  h3{
+    color:#817900;
+  }
+  
+  
+  .formslogin {
+    padding-top: 5%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .form-wrapperlogin {
+    width: 35%;
+    border: 2px solid #817900;
+    padding-top: 2%;
+    font-size: large;
+  }
+  
+  input,
+  button,
+  select {
+    display: inline-block;
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  
+  .nav-menu{
+    display:flex;
+    padding-left: 50%;
+  }
+  
+  .loginOtsikot {
+      text-align: center;
+      font-size: 1.5em;
+  }
+
+  .psw{
+    border-radius: 15px;
+    background-color: rgb(179, 87, 87);
+    border-radius: 1%;
+    width: 50%;
+    border: 3px solid #817900;
+    padding: 10px;
+    display: block;
+    position: fixed;
+    bottom: 1vh;
+    left:50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  
+  }
+
+  
+  .savebtn{
+    border-radius: 8px;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: #817900;;
+  }
+  
+  .submitbtn{
+    border-radius: 8px;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: rgb(36, 170, 141);
+    width: 100%;
+  }
+  
+  .navbarcontainer{
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    margin: auto;
+    background-color: rgb(55, 224, 224);
+  }
+  button:hover {
+    opacity: 0.5;
+  }
+
+  .mainmenu {
+    float: left;
+    display:flex;
+    font: bold 12px Arial;
+    font-size: large;
+    color: #333333;
+    padding: 25px 50px 25px 50px;
+    height: auto;
+  }
 
 /* Main jutut */
 /* ------------------------------------------------------------------------------ */
@@ -132,60 +261,6 @@ nav {
 .mobile-nav-item {
     display: none;
 }
-
-/* Modali*/
-/* ------------------------------------------------------------------------------ */
-.mainmenu {
-    display:flex;
-    font: bold 11px Arial;
-    background: url(https://c.tenor.com/FpbWqUpKsacAAAAM/kekw-twitch.gif);
-    color: #333333;
-    padding: 25px 50px 25px 50px;
-    max-width: fit-content;
-    max-height: fit-content;
-    border-radius: 15px;
-    height: auto;
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; 
-    overflow: auto;
-    background-color: #a0a4b8;
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    border-radius: 25px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color:#a0a4b8;
-    margin: 15% auto;
-    padding: 20px;
-    border: 3px solid #817900;
-    width: 40%;
-    height: 25%;
-}
-
-/* The Close Button */
-.close {
-    color: #817900;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-} 
-
 
 /* Postaus (meemi, tykkäynappi, kommentointi tms.) */
 /* ------------------------------------------------------------------------------ */
